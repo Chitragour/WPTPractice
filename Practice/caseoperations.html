@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Name</title>
+        <script>
+            function upper(){
+                let u=document.getElementById("s1").value
+                let up=u.toUpperCase()
+                document.getElementById("p1").innerHTML=up
+            }
+        </script>
+    </head>
+    <body align="center">
+        Enter string=<input type="text" id="s1"value="Kuch bhi"><br/>
+        UpperCase=<input type="radio" name="convert" onclick="upper()">
+        LowerCase=<input type="radio" name="convert" onclick="lower()">
+        TitleCase=<input type="radio" name="convert" onclick="title()">
+        <br/>
+        <h4>id="p1"</h4>
+    </body>
+</html>

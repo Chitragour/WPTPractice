@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Currency Converter</title>
+        <script>
+            function calculate(){
+                let n=document.getElementById("num1").value
+                let a=document.getElementById("op1").value
+                let b=document.getElementById("op2").value
+                console.log(n)
+                let result;
+                if(a==1){
+                    if(b==2) result=n*0.80
+                    if(b==3) result=n*0.93
+                    if(b==4) result=n*83.43
+                }
+                if(a==2){
+                    if(b==1) result=n*1.25
+                    if(b==3) result=n*1.16
+                    if(b==4) result=n*104.69
+                }
+                if(a==3){
+                    if(b==1) result=n*1.08
+                    if(b==2) result=n*0.86
+                    if(b==4) result=n*89.88
+                }
+                if(a==4){
+                    if(b==1) result=n*0.012
+                    if(b==2) result=n*0.0096
+                    if(b==3) result=n*0.011
+                }
+
+                document.getElementById("p1").innerHTML="<h2>"+result+"</h2>"
+            }
+        </script>
+    </head>
+    <body align="center">
+    <pre>
+            <h3>Enter Number=</h3>   <input type="number" id="num1" value="0">
+    From:
+    <select id="op1">
+            <option>Select Currency</option>
+            <option value="1">Dollar &#36;</option>
+            <option value="2">Pound &#163;</option>
+            <option value="3">Euro &#8364;</option>
+            <option value="4">Rupee &#8377;</option>
+    </select>
+    TO:
+    <select id="op2" onclick="calculate()">
+            <option>Select Currency</option>
+            <option value="1">Dollar &#36;</option>
+            <option value="2">Pound &#163;</option>
+            <option value="3">Euro &#8364;</option>
+            <option value="4">Rupee &#8377;</option>
+    </select>
+    <br/>
+    <h4>The Result is=</h4><h5 id="p1"></h5>
+    </pre>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>UpperCase</title>
+        <script>
+            function f1(){
+                let i=document.getElementById("i1").value
+                // let s=i.value
+                let r=i.toUpperCase()
+                document.getElementById("op1").innerHTML="<b>"+r+"<b/>"
+
+            }
+        </script>
+    </head>
+    <body align="center">
+        Enter String:<input type="text" id="i1">
+        <input type="button" onclick="f1()" value="Show Uppercase"><br/>
+        In UpperCase=
+        <p id="op1"></p>
+    </body>
+</html>

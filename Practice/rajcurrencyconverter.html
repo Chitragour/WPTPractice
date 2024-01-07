@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Currency Converter</title>
+        <script>
+            function convert()
+            {
+                let data = parseInt(document.getElementById("num").value)
+                //let cur = document.getElementById("cur").value
+                let symbol = document.getElementById("cur")
+                let cur = symbol.value
+                let sel_sym = symbol.options[symbol.selectedIndex].text
+                // let pound = document.getElementById("pound").selected
+                // let dollor = document.getElementById("dollar").selected
+                // let cent = document.getElementById("cent").selected
+                // let euro = document.getElementById("euro").selected
+                // let yen = document.getElementById("yen").selected
+                document.getElementById("symbol").innerHTML = "Currency In "+sel_sym
+                let res 
+                if(cur == "pound")
+                {
+                    res = parseFloat(data*0.0096)
+                }
+                else if(cur == "dollar")
+                {
+                    res = parseFloat(data*0.012)
+                }
+                else if(cur == "cent")
+                {
+                    res = parseFloat(data*239.5)
+                }
+                else if(cur == "euro")
+                {
+                    res = parseFloat(data*0.01)
+                }
+                else if(cur == "yen")
+                {
+                    res = parseFloat(data*1.74)
+                }
+                document.getElementById("res").innerHTML = "<b>"+res+"</b>"
+            }
+        </script>
+    </head>
+    <body>
+        <div align = "center">
+            <h2><b><u>Currency Converter</u></b></h2>
+            <label>Enter Currency in &#x20B9 : <input type="number" id = "num" value = "0"></label>
+            <h3>Select Currency</h3>
+            <select id = "cur" onchange="convert()">
+                <option>Select</option>
+                <option value = "pound">&#x20A4</option>
+                <option value = "dollar">&#x24</option>
+                <option value = "cent">&#xa2</option>
+                <option value = "euro">&#x20AC</option>
+                <option value = "yen">&#xa5</option>
+            </select>
+            <div>
+                <h2 id = "symbol"></h2>
+                <h3 id = "res"></h3>
+            </div>
+        </div>
+    </body>
+</html>
