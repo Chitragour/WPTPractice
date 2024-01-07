@@ -30,4 +30,14 @@ npm create-react-app mywebapp
 > To send data from parent(outer) component [[i.e App.js]] to child(inner) component -> we use PROPS
 > The components we create collect these PROPS.
 > We can pass all data types to PROPS
+> In React each element has a propert or PROP called "onClick"
 > 
+
+
+JAVASCRIPT
+> JS supported data types :
+1.)Number
+2.)boolean
+3.)string
+4.)undefined
+5.)function
