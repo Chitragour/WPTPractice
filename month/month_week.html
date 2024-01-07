@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Month | Week Name</title>
+        <script>
+            function monthname()
+            {
+                let m = parseInt(document.getElementById("month").value)
+                let m_res
+                switch(m)
+                {
+                    case 1: m_res = "January";break;
+                    case 2: m_res = "Feburary";break;
+                    case 3: m_res = "March";break;
+                    case 4: m_res = "April";break;
+                    case 5: m_res = "May";break;
+                    case 6: m_res = "June";break;
+                    case 7: m_res = "July";break;
+                    case 8: m_res = "August";break;
+                    case 9: m_res = "September";break;
+                    case 10: m_res = "October";break;
+                    case 11: m_res = "November";break;
+                    case 12: m_res = "December";break;
+                    default : m_res = "Invalid Selection for month !";
+                }
+                document.getElementById("m_res").innerHTML = m_res 
+            }
+
+            function weekname()
+            {
+                let w = parseInt(document.getElementById("week").value)
+                let w_res
+                switch(w)
+                {
+                    case 0: w_res = "Sunday";break;
+                    case 1: w_res = "Monday";break;
+                    case 2: w_res = "Tuesday";break;
+                    case 3: w_res = "Wednesday";break;
+                    case 4: w_res = "Thursday";break;
+                    case 5: w_res = "Friday";break;
+                    case 6: w_res = "Saturday";break;
+                    default : w_res = "Invalid selection for weekday !";
+                }
+                document.getElementById("w_res").innerHTML = w_res
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <h1 align = "center">Month and Week Name</h1>
+        <div align = "center">
+            <select id="month" onchange = "monthname()">
+                <option>Select Month Number</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            <select id="week" onchange="weekname()">
+                <option>Select Week Number</option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+        </div>
+        <div align = "center">
+            <h2 id = "m_res"></h2>
+            <h2 id = "w_res"></h2>
+        </div>
+    </body>
+</html>
