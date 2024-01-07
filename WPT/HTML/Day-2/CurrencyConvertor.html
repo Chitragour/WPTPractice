@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CurrencyConvertor</title>
+    <script>
+        function Rupeeconvertor() {
+            let val = document.getElementById("val").value;
+            let select = document.getElementById("op").value;
+            let opt;
+            switch(select) {
+                case '2' : opt = val * 104.69; break;
+                case '3' : opt = val * 22.72; break;
+                case '4' : opt = val * 83.43; break;
+                case '5' : opt = val * 89.88; break;
+            }
+            document.getElementById("ans").innerHTML = opt;
+        }
+
+        function convertor() {
+
+        }
+    </script>
+</head>
+<body>
+    <pre>
+        Enter Number : <input type="number" id = "val" />
+        
+        Currency Options: <select id = "op" onchange="Rupeeconvertor() ">
+            <option>Select an currency:</option>
+            <option value = '2'>Pound (&#xa3;) </option>
+            <option value = '3'>Dirahm (&#x20AF;) </option>
+            <option value = '4'>USD (&#x24;) </option>
+            <option value = '5'>EURO (&#x20AC;) </option>
+        </select>
+        <p> Value : <span id = "ans"></span> </p>
+
+        Select Currency type entered: <select"> 
+            <option>Select from below: </option>
+            <option value = '2'>Pound (&#xa3;) </option>
+            <option value = '3'>Dirahm (&#x20AF;) </option>
+            <option value = '4'>USD (&#x24;) </option>
+            <option value = '5'>EURO (&#x20AC;) </option>
+        </select>
+
+        Select Currency type you want: <select >
+            <option>Select from below:</option>
+            <option value = '2'>Pound (&#xa3;) </option>
+            <option value = '3'>Dirahm (&#x20AF;) </option>
+            <option value = '4'>USD (&#x24;) </option>
+            <option value = '5'>EURO (&#x20AC;) </option>
+        </select>
+        <p> Value : <span id = "cans"></span> </p>
+    </pre>
+</body>
+</html>

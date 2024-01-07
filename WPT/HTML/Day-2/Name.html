@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Name</title>
+    <script>
+
+        function display() {
+            var first = document.getElementById("fname").value;
+            var second = document.getElementById("lname").value;
+            var fullname = first + " "+ second;   
+            document.getElementById("ans").innerHTML = fullname;
+        }   
+
+        function titlemale() {
+            let first = document.getElementById("fname").value;
+            first.charAt(0).toUpperCase();
+            //console.log("First first char =  " +  first.charAt(0).toUpperCase());
+            first.substring(1).toLowerCase();
+            //console.log("First remain char =  " + first.substring(1).toLowerCase());
+            let a = first.charAt(0).toUpperCase() +  first.substring(1).toLowerCase();
+
+            let second = document.getElementById("lname").value;
+            second.charAt(0).toUpperCase();
+            //console.log("Second first char =  " +  second.charAt(0).toUpperCase());
+            second.substring(1).toLowerCase();
+            //console.log("Second remain char =  " + second.substring(1).toLowerCase());
+            let b = second.charAt(0).toUpperCase()+ second.substring(1).toLowerCase();
+
+            let fullname = "Mr " + a + " "+ b;   
+            //console.log("FULL name = " +  first + " " + second);
+            document.getElementById("ans").innerHTML = fullname;
+        }
+
+        function titlefemale(){
+            let first = document.getElementById("fname").value;
+            first.charAt(0).toUpperCase();
+            //console.log("First first char =  " +  first.charAt(0).toUpperCase());
+            first.substring(1).toLowerCase();
+            //console.log("First remain char =  " + first.substring(1).toLowerCase());
+
+            let a = first.charAt(0).toUpperCase() +  first.substring(1).toLowerCase();
+            
+            let second = document.getElementById("lname").value;
+            second.charAt(0).toUpperCase();
+            //console.log("Second first char =  " +  second.charAt(0).toUpperCase());
+            second.substring(1).toLowerCase();
+            //console.log("Second remain char =  " + second.substring(1).toLowerCase());
+            let b = second.charAt(0).toUpperCase()+ second.substring(1).toLowerCase();
+
+            let fullname = "Miss " + a + " "+ b;   
+
+            //console.log("FULL name = " +  first + " " + second);
+            document.getElementById("ans").innerHTML = fullname;
+        }
+    </script>
+</head>
+<body>
+    <pre>
+        Enter First name : <input type="text" id = "fname"/>
+
+        Enter Last name : <input type="text" id = "lname" onblur="display()"/>
+
+        Select gender: 
+        Male : <input type="radio" name = "gender" id = "male" onclick="titlemale()" />
+        Female : <input type="radio" name = "gender" id = "female" onclick="titlefemale()" />
+        
+        <p> Your generated name is : <span id = "ans"></span></p>
+    </pre>
+</body>
+</html>

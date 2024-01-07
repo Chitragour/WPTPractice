@@ -1,0 +1,15 @@
+
+.try{
+ 
+    border : 2px dashed red;
+    width: fit-content;
+    /* block-size: fit-content; */
+}
+
+.try2 {
+    display: flex;
+    border : 2px dashed red;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;  
+}

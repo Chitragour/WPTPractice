@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Radio Trial</title>
+    <script>
+        function change() {
+            let text = document.getElementById("text").value;
+            let uc = document.getElementById("uc").checked;
+            let lc = document.getElementById("lc").checked;
+            let tc = document.getElementById("tc").checked;
+
+            let op;
+            if(uc) {
+                op = text.toUpperCase();
+            } if (lc) {
+                op = text.toLowerCase();
+            } if (tc)  {
+                let begin = text.charAt(0).toUpperCase();
+                let remain = text.substring(1).toLowerCase();
+                op = begin + remain;
+            }
+            document.getElementById("result").innerHTML = op;
+        }
+    </script>   
+</head>
+<body>
+    <pre>
+        Enter the text : <input type="text" id = "text" onblur="change()" />
+            <label> UpperCase: <input type="radio" name = "select" id = "uc" onclick="change()"/> </label>
+            <label> LowerCase: <input type="radio" name = "select" id = "lc" onclick="change()"/> </label>
+            <label> TitleCase: <input type="radio" name = "select" id = "tc" onclick="change()"/> </label>
+        <p> Result : <span id = "result"></span></p>
+    </pre>
+</body>
+</html>
